@@ -1,0 +1,44 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "sibakti grobogan",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./",
+    "dev": "nodemon --legacy-watch ./src/server.js",
+    "start": "node ./src/server.js",
+    "migrate:make": "npx knex migrate:make",
+    "migrate:latest": "npx knex migrate:latest",
+    "migrate:down": "npx knex migrate:down",
+    "migrate:prod": "knex migrate:latest --env production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "eslint": "^9.39.4",
+    "eslint-config-dicodingacademy": "^0.9.5",
+    "globals": "^16.2.0",
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "axios": "^1.16.1",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "joi": "^18.1.2",
+    "jsonwebtoken": "^9.0.3",
+    "knex": "^3.3.0",
+    "mysql2": "^3.23.4",
+    "nanoid": "^5.1.9",
+    "node-pg-migrate": "^8.0.4",
+    "pg": "^8.20.0",
+    "redis": "^5.12.1",
+    "socket.io": "^4.8.3",
+    "swagger-ui-express": "^5.0.1",
+    "yamljs": "^0.3.0"
+  }
+}
